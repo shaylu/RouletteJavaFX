@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="800.0" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rouletteex2.NewGameController">
+   <children>
+      <Label layoutX="35.0" layoutY="113.0" styleClass="lbl" text="Roulette Type" />
+      <Label layoutX="35.0" layoutY="150.0" styleClass="lbl" text="Minimum bets per player" />
+      <ComboBox id="cbxMinimumBetsPerPlayer" fx:id="cbxMinimumBets" layoutX="245.0" layoutY="146.0" prefWidth="150.0" />
+      <ComboBox id="cbxMaximumBetsPerPlayer" fx:id="cbxMaximumBets" layoutX="245.0" layoutY="180.0" prefWidth="150.0" />
+      <Label layoutX="35.0" layoutY="184.0" styleClass="lbl" text="Maximum bets per player" />
+      <Label layoutX="35.0" layoutY="218.0" styleClass="lbl" text="Initial amout of money per player" />
+      <TextField id="txtInitAmountOfMoney" fx:id="txtInitialAmount" layoutX="246.0" layoutY="214.0" text="100" />
+      <TextField id="txtGameName" fx:id="txtGameName" layoutX="246.0" layoutY="48.0" text="New Game" />
+      <Label layoutX="35.0" layoutY="52.0" styleClass="lbl" text="Game name" />
+      <Label layoutX="35.0" layoutY="279.0" styleClass="lbl" text="Add Players" />
+      <TextField id="txtPlayerName" fx:id="txtPlayerName" layoutX="34.0" layoutY="302.0" text="Name" />
+      <Button layoutX="191.0" layoutY="302.0" mnemonicParsing="false" onAction="#AddHumanPlayer" text="Add as Human" />
+      <Button layoutX="290.0" layoutY="302.0" mnemonicParsing="false" onAction="#AddComputerPlayer" text="Add as Computer" />
+      <Button id="btnStartGame" layoutX="685.0" layoutY="509.0" mnemonicParsing="false" onAction="#StartGame" text="Start Game" />
+      <RadioButton fx:id="rdAmerican" layoutX="245.0" layoutY="113.0" mnemonicParsing="false" selected="true" text="American">
+         <toggleGroup>
+            <ToggleGroup fx:id="grpRouletteType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdFrench" layoutX="335.0" layoutY="113.0" mnemonicParsing="false" text="French" toggleGroup="$grpRouletteType" />
+      <VBox fx:id="pnlPlayers" layoutX="34.0" layoutY="334.0" prefHeight="200.0" prefWidth="600.0" />
+      <Label fx:id="lblPlayersErrorMessage" layoutX="410.0" layoutY="306.0" text="Label" />
+   </children>
+</Pane>

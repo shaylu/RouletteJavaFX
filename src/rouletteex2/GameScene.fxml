@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="800.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rouletteex2.GameSceneController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="256.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="322.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane prefHeight="256.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="532.0" minWidth="10.0" prefWidth="532.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="271.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="256.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="pnlTable" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlRoulette" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Pane fx:id="pnlBottom" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <VBox fx:id="pnlPlayers" layoutX="14.0" layoutY="11.0" prefHeight="296.0" prefWidth="234.0" style="-fx-background-color: white;">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Pane fx:id="pnlBet" layoutX="256.0" layoutY="11.0" prefHeight="178.0" prefWidth="330.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="lblBetTitle" layoutX="14.0" layoutY="14.0" text="Player 1 turn">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="42.0" text="Bet type" />
+                  <ComboBox fx:id="cbxBetType" layoutX="165.0" layoutY="36.0" prefWidth="150.0" />
+                  <Slider fx:id="scrollMoney" layoutX="166.0" layoutY="68.0" minorTickCount="1" prefHeight="14.0" prefWidth="150.0" snapToTicks="true" />
+                  <Label layoutX="14.0" layoutY="67.0" text="Amout of money" />
+                  <Label fx:id="lblMoney" layoutX="283.0" layoutY="87.0" text="Label" />
+                  <Button fx:id="btnPlaceBet" layoutX="166.0" layoutY="104.0" mnemonicParsing="false" text="Place Bet" />
+                  <Label fx:id="lblBetMessage" alignment="CENTER" layoutX="15.0" layoutY="141.0" prefHeight="17.0" prefWidth="299.0" text="Label">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox fx:id="pnlBets" layoutX="256.0" layoutY="196.0" prefHeight="111.0" prefWidth="330.0" style="-fx-background-color: white;" />
+            <TextFlow fx:id="pnlLog" layoutX="594.0" layoutY="11.0" prefHeight="296.0" prefWidth="197.0" style="-fx-background-color: white;" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
